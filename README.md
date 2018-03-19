@@ -15,11 +15,14 @@ Logging colored text to the console requires ANSI escape sequences. These ANSI e
 
 When testing software it can become hard to grok the difference between the expected and the actual result when the ANSI escape sequences are used.  To remedy this, Unenki encodes ANSI escape sequences to lower-case unicode literals, while keeping certain ASCII characters.
 
-## Usage
+## Encode
 
 Encode unicode ANSI escape characters to a console friendly string:
 
 ```javascript
+const unenki = require('unenki')
+const chalk = require('chalk')
+
 // Blue text
 const ansiEscapedStr = '\u001b[34m HELLO_BLUE_WORLD! \u001b[39m'
 
@@ -27,18 +30,33 @@ const encoded = unenki.encode(ansiEscapedStr)
 // '\\u001b[34m HELLO_BLUE_WORLD! \\u001b[39m'
 ```
 
-Strip unicode characters from a string containing ANSI escape characters.
+## Strip
 
-```javascript
+Strips ANSI escape sequences from unencoded ansi-escaped strings:
+
+```js
+const unenki = require('unenki')
 const chalk = require('chalk')
 
-const ansiEscapedStr = chalk.green('Hello, world!')
-// '\u001b[32mHello, world!\u001b[39m'
+const ansiEscapedStr = chalk.green('Test')
 
-const result = unenki.encode(ansiEscapeStr)
-// '\\u001b[32mHello, world!\\u001b[39m'
+const result = unenki.strip(ansiEscapedStr)
+// Result = 'Test'
 ```
 
+## Strip Encoded
+
+Strips Unicode literals from an encoded string:
+
+```javascript
+const unenki = require('unenki')
+
+const ansiEscapedStr = chalk.green('Test')
+const encoded = unenki.encode(ansiEscapedStr)
+
+const result = unenki.stripEncoded(encoded)
+// Result = 'Test'
+```
 
 ## Keep
 

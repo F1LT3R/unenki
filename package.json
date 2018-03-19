@@ -1,6 +1,6 @@
 {
     "name": "unenki",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "🔢  Encode ANSI Escape sequences to Unicode Literal strings, Eg: \\u001b to \\\\u001b",
     "main": "index.js",
     "scripts": {
