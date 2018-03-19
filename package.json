@@ -1,0 +1,53 @@
+{
+    "name": "unenki",
+    "version": "1.0.0",
+    "description": "🔢  Encode ANSI Escape sequences to Unicode Literal strings, Eg: \\u001b to \\\\u001b",
+    "main": "index.js",
+    "scripts": {
+        "test": "xo && nyc  --reporter=html --reporter=lcov ava",
+        "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/f1lt3r/unenki.git"
+    },
+    "keywords": [
+        "ansi",
+        "escape",
+        "sequence",
+        "string",
+        "unicode",
+        "literal",
+        "convert",
+        "terminal",
+        "keep",
+        "force",
+        "characters",
+        "color"
+    ],
+    "author": "F1LT3R",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/f1lt3r/unenki/issues"
+    },
+    "homepage": "https://github.com/f1lt3r/unenki#readme",
+    "devDependencies": {
+        "ava": "^0.25.0",
+        "chalk": "^2.3.2",
+        "chromafi": "^1.2.0",
+        "coveralls": "^3.0.0",
+        "nyc": "^11.6.0",
+        "xo": "^0.20.3"
+    },
+    "xo": {
+        "esnext": true,
+        "semicolon": false,
+        "rules": {
+            "no-console": 1,
+            "space-before-function-paren": 0
+        }
+    },
+    "dependencies": {
+        "he": "^1.1.1"
+    }
+}
