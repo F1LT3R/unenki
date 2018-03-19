@@ -95,3 +95,7 @@ const result = unenki.encode(ansiEscapedStr, opts)
 ```shell
 yarn add unenki
 ```
+
+## Credits
+
+Thanks to [Gustavo Ribeiro Vieira from the Noun Project](https://thenounproject.com/GustavoRibeiroVieira/) for the beetle vector used in the Unenki logo.
