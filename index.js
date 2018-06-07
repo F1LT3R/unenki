@@ -38,7 +38,7 @@ const stripEncoded = str => {
 
 const strip = str => {
 	if (typeof str !== 'string') {
-		throw new TypeError('AnsiEncode.strip: You must pass a string!')
+		throw new TypeError('AnsiEncode.strip: You must pass a string.')
 	}
 
 	const encoded = encode(str)
